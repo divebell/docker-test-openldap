@@ -63,13 +63,13 @@ load_initial_data() {
 slapd -h "ldapi:///" -u openldap -g openldap
 
 configure_msad_features
-configure_tls
 configure_logging
 configure_memberof_overlay
 configure_admin_config_pw
 load_initial_data
 if [ "$LDAP_FORCE_STARTTLS" == "true" ]; then
-    force_starttls
+   configure_tls
+   force_starttls
 fi
 
 # Shutdown openldap daemon
