@@ -1,0 +1,8 @@
+dn: cn=admin_safe,ou=people,dc=planetexpress,dc=com
+objectclass: Group
+objectclass: top
+groupType: 2147483650
+cn: admin_safe
+member: cn=admin_staff,ou=people,dc=planetexpress,dc=com
+member: cn=admin_interns,ou=people,dc=planetexpress,dc=com
+member: cn=Bender Bending Rodriguez,ou=people,dc=planetexpress,dc=com

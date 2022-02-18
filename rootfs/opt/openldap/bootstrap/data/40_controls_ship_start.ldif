@@ -1,0 +1,7 @@
+dn: cn=ship_start,ou=people,dc=planetexpress,dc=com
+objectclass: Group
+objectclass: top
+groupType: 2147483650
+cn: ship_start
+member: cn=ship_crew,ou=people,dc=planetexpress,dc=com
+member: cn=Hubert J. Farnsworth,ou=people,dc=planetexpress,dc=com
