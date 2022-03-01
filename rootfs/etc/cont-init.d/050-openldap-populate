@@ -30,6 +30,12 @@ configure_memberof_overlay(){
   ldapmodify -Y EXTERNAL -H ldapi:/// -f ${CONFIG_DIR}/memberof.ldif -Q
 }
 
+configure_control(){
+  echo "Configure control type..."
+  ldapmodify -Y EXTERNAL -H ldapi:/// -f ${CONFIG_DIR}/control.ldif -Q
+}
+
+
 force_starttls(){
   echo "Force StartTLS..."
   ldapmodify -Y EXTERNAL -H ldapi:/// -f ${CONFIG_DIR}/force-starttls.ldif -Q
@@ -65,6 +71,7 @@ slapd -h "ldapi:///" -u openldap -g openldap
 configure_msad_features
 configure_logging
 configure_memberof_overlay
+configure_control
 configure_admin_config_pw
 load_initial_data
 if [ "$LDAP_FORCE_STARTTLS" == "true" ]; then

@@ -1,0 +1,8 @@
+dn: cn={0}core,cn=schema,cn=config
+changetype: modify
+add: olcObjectClasses
+olcObjectClasses: ( 1.2.840.113556.1.5.9 NAME 'Control'
+                    DESC 'A control granting permissions to members'
+                    SUP top
+                    STRUCTURAL
+                    MAY ( cn $ member ) )
